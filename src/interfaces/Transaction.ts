@@ -1,12 +1,14 @@
-interface Transaction {
-  nome: string;
-  id: number;
-  data: Date;
-  status: StatusTransacao;
-  email: string;
-  valor: string; // number | null
-  pagamento: PagamentoTransacao;
-  clienteNovo: boolean;
+declare global {
+  interface Transaction {
+    name: string;
+    id: number;
+    data: Date;
+    status: StatusTransacao;
+    email: string;
+    value: number | null; // "-"
+    payment: PagamentoTransacao;
+    newClient: boolean;
+  }
 }
 
 export default Transaction;

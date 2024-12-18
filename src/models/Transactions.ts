@@ -1,4 +1,5 @@
 import Transaction from "../interfaces/Transaction";
+import stringToNumber from "../utils/stringToNumber";
 
 class Transactions {
   data;
@@ -59,14 +60,14 @@ class Transactions {
 
   private normalizeTransaction(transaction: ApiTransaction): Transaction {
     return {
-      nome: transaction.Nome,
+      name: transaction.Nome,
       id: transaction.ID,
       data: new Date(),
       status: transaction.Status,
       email: transaction.Email,
-      valor: transaction["Valor (R$)"],
-      pagamento: transaction["Forma de Pagamento"],
-      clienteNovo: Boolean(transaction["Cliente Novo"]),
+      value: stringToNumber(transaction["Valor (R$)"]),
+      payment: transaction["Forma de Pagamento"],
+      newClient: Boolean(transaction["Cliente Novo"]),
     };
   }
 }
