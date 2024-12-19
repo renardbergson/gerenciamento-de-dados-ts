@@ -55,6 +55,11 @@ async function fillStats(data: Transaction[]): Promise<void> {
 
   setPaymentsAndStatus(stats.payments, "payment");
   setPaymentsAndStatus(stats.status, "status");
+
+  const bestDayElement = document.querySelector<HTMLElement>("#bestDay span");
+  if (bestDayElement) {
+    bestDayElement.innerText = stats.bestDay[0];
+  }
 }
 
 handleData();

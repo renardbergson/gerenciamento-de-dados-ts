@@ -1,3 +1,4 @@
+import stringToDate from "../utils/stringToDate";
 import stringToNumber from "../utils/stringToNumber";
 
 class Transactions {
@@ -61,7 +62,7 @@ class Transactions {
     return {
       name: transaction.Nome,
       id: transaction.ID,
-      data: new Date(),
+      date: stringToDate(transaction.Data),
       status: transaction.Status,
       email: transaction.Email,
       value: stringToNumber(transaction["Valor (R$)"]),
