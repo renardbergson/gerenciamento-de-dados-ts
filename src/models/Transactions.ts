@@ -1,8 +1,7 @@
-import Transaction from "../interfaces/Transaction";
 import stringToNumber from "../utils/stringToNumber";
 
 class Transactions {
-  data;
+  data: Promise<Transaction[] | null>;
 
   constructor(url: string) {
     this.data = this.fetchData(url);

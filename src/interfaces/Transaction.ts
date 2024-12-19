@@ -10,5 +10,3 @@ declare global {
     newClient: boolean;
   }
 }
-
-export default Transaction;
