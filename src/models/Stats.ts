@@ -43,28 +43,27 @@ class Stats {
   }
 
   private setBestDay() {
-    const semana = {
-      ["Domingo"]: 0,
-      ["Segunda"]: 0,
-      ["Terça"]: 0,
-      ["Quarta"]: 0,
-      ["Quinta"]: 0,
-      ["Sexta"]: 0,
-      ["Sábado"]: 0,
-    };
+    const weekDays = [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado",
+    ];
 
-    this.transactions.forEach((item) => {
-      const day = item.date.getDay();
-      if (day === 0) semana.Domingo += 1;
-      if (day === 1) semana.Segunda += 1;
-      if (day === 2) semana.Terça += 1;
-      if (day === 3) semana.Quarta += 1;
-      if (day === 4) semana.Quinta += 1;
-      if (day === 5) semana.Sexta += 1;
-      if (day === 6) semana.Sábado += 1;
+    const week = weekDays.reduce((acc: CountList, day) => {
+      acc[day] = 0;
+      return acc;
+    }, {});
+
+    this.transactions.forEach(({ date }) => {
+      const dayIndex = date.getDay();
+      week[weekDays[dayIndex]] += 1;
     });
 
-    const bestDay = Object.entries(semana).reduce((acc, item) => {
+    const bestDay = Object.entries(week).reduce((acc, item) => {
       return acc[1] > item[1] ? acc : item;
     });
 
