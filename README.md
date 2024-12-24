@@ -1,15 +1,15 @@
-# Projeto Gerenciamento de Dados com TypeScript
+# 📊 Projeto Gerenciamento de Dados com TypeScript
 
 Este projeto tem como objetivo modelar e gerenciar dados vindos de uma API. Os dados simulam transações referentes a compras de produtos, contendo informações como ID, data, forma de pagamento e valor. Por fim, os dados são apresentados de forma organizada em uma tabela, além de exibir estatísticas gerais relacionadas às transações. O projeto foi desenvolvido utilizando **TypeScript** e a ferramenta **Vite** para facilitar o desenvolvimento e automação do seu processo de inicialização.
 
-## Tecnologias Utilizadas
+## 🖥️ Tecnologias Utilizadas
 
 - **TypeScript**: Para garantir maior robustez aproveitar os benefícios da tipagem estática.
 - **Vite**: Para proporciona uma configuração rápida e otimizada, com recarga instantânea.
 - **HTML5/CSS3**: Para estruturar e estilizar a interface.
 - **JavaScript**: Para ditar a lógicam manipulação de dados e interação com a API.
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
 - **Consumo de API**: O projeto consome uma API externa para obter dados sobre transações e compras de produtos.
 - **Redesenho de Dados**: Os dados recebidos da API são manipulados e reorganizados para se ajustarem a uma nova estrutura visual.
@@ -17,15 +17,15 @@ Este projeto tem como objetivo modelar e gerenciar dados vindos de uma API. Os d
 - **Seção de Estatísticas**: Uma seção dedicada a apresentar estatísticas gerais sobre as transações, como totais de compras e formas de pagamento.
 - **Interface Desktop Only**: A interface foi projetada para uso exclusivamente em desktop, sem suporte para dispositivos móveis.
 
-## Live Link
+## 🔗 Live Link
 
 - [Clique aqui](https://data-maneger-ts.netlify.app) para conferir o projeto!
 
-## Preview
+## 🔎 Preview
 
 <img width="1679" alt="print" src="https://github.com/user-attachments/assets/2380b2f3-ea05-439b-84a7-50726dd575b7" />
 
-## Como Rodar o Projeto
+## ▶️ Como Rodar o Projeto
 
 1. Clone o repositório:
 
